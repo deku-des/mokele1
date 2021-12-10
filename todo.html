@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> WELCOME BACK TO THE MOKELE MBEMBE BLOG </title>
+        <a href="C:\Users\MJ\Documents\code\mokele\todo.html" id="todo"></a>
+        <style>
+
+
+            body {
+                background-image: url('http://images5.fanpop.com/image/photos/31700000/Mokele-Mbembe-cryptozoology-31776274-350-242.jpg');
+                font-family: 'fixedsys';
+                padding: 10%;
+                margin-top: 100px;
+                margin-bottom: 100px;
+                margin-right: 150px;
+                margin-left: 80px;
+            }
+
+            ::selection {
+            background-color: rgba(0, 247, 255, 0.336);
+            color: rgb(219, 255, 57); 
+            }
+        
+            h1 {
+                font-family: 'fixedsys';
+                text-shadow: 4px 4px rgb(116, 84, 122);
+            }
+
+            h3 {
+                background-image: url('https://static.wikia.nocookie.net/godzilla/images/9/91/MokeleMbembe75.jpeg/revision/latest/top-crop/width/360/height/450?cb=20200501224422');
+                color: rgba(131, 196, 221, 0.877);
+                opacity: 0.8;
+            }
+
+            /* Include the padding and border in an element's total width and height */
+
+            * {
+            box-sizing: border-box;
+            border-color: rebeccapurple;
+            }
+
+            /* Remove margins and padding from the list */
+            ul {
+            margin: 50px;
+            padding: 0;
+            border: 2px rgba(131, 196, 221, 0.877);
+            border-radius: 6px;
+            border-color: rgb(208, 65, 252);
+            }
+
+            /* Style the list items */
+            ul li {
+            cursor: pointer;
+            position: relative;
+            padding: 12px 8px 12px 40px;
+            list-style-type: none;
+            background: rgba(171, 230, 225, 0.897);
+            font-size: 18px;
+            transition: 0.2s;
+            border: 2px rgba(108, 150, 167, 0.877);
+            border-radius: 6px;
+            border-color: rgb(119, 0, 167);
+            width: 750px;
+            
+            /* make the list items unselectable */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            }
+
+            /* Set all odd list items to a different color (zebra-stripes) */
+            ul li:nth-child(odd) {
+            background: #87a9aad3;
+            }
+
+            /* Darker background-color on hover */
+            ul li:hover {
+            background: #ddd;
+            }
+
+            /* When clicked on, add a background color and strike out text */
+            ul li.checked {
+            background: rgba(102, 102, 102, 0.884);
+            color: #fff;
+            text-decoration: line-through;
+            }
+
+            /* Add a "checked" mark when clicked on */
+            ul li.checked::before {
+            content: '';
+            position: absolute;
+            border-color: rgb(0, 0, 0);
+            border-style: solid;
+            border-width: 0 2px 2px 0;
+            top: 10px;
+            left: 16px;
+            transform: rotate(45deg);
+            height: 15px;
+            width: 7px;
+            }
+
+            /* Style the close button */
+            .close {
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding: 12px 16px 12px 16px;
+            }
+
+            .close:hover {
+            background-color: #1ba79bd7;
+            color: white;
+            }
+
+            /* Style the header */
+            .header {
+            background-color: #524b91b2;
+            padding: 30px 40px;
+            color: white;
+            text-align: center;
+            margin: 25px;
+            background-image: url('https://ak.picdn.net/shutterstock/videos/1009967207/thumb/1.jpg?ip=x480');
+            opacity: 80%;
+            }
+
+            /* Clear floats after the header */
+            .header:after {
+            content: "";
+            display: table;
+            clear: both;
+            }
+
+            /* Style the input */
+            input {
+            margin: 0;
+            border: none;
+            border-radius: 0;
+            width: 75%;
+            padding: 10px;
+            float: left;
+            font-size: 16px;
+            color:rgb(119, 0, 167)
+            }
+
+            /* Style the "Add" button */
+            .addBtn {
+            padding: 10px;
+            width: 25%;
+            background: #d9d9d9;
+            color: #555;
+            float: left;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 2px;
+            border-color: black;
+            }
+
+            .addBtn:hover {
+            background-color: #bbb;
+            }
+
+            #myInput {
+                font-family: 'fixedsys';
+                background-color: rgb(73, 70, 77);
+                color: rgb(255, 255, 255);
+                border-color: rgb(45, 255, 227) ;
+                border-radius: 2px;
+                opacity: 100%;
+            }
+
+            textarea {
+                width: 300px;
+                height: 300px;
+                background-color: rgba(44, 44, 44, 0.966);
+                border-radius: 2px ;
+                position: absolute;
+                margin-left: 65%;
+                margin-right: 65%;
+                bottom: 100px;
+                color: dodgerblue;
+                padding-inline: 20px;
+                padding-top: 1%;
+            }
+
+            #gite {
+                list-style-type: none;
+                margin: 2px;
+                padding: 2px;
+                width: 60px;
+                background-color: rgba(29, 29, 29, 0.808);
+                border: 1px solid #555;
+                float: left;
+                position:relative;
+                left: 20px;
+                top: 150px;
+                opacity: 0.85;
+                border: 2px solid rgb(0, 0, 0);
+                border-radius: 7.5px;
+                color: grey;
+                top: 0px;
+            }
+
+            #gite:hover {
+                background-color: rgba(110, 110, 110, 0.932);
+                color: white;
+                background-image: url('https://static.wikia.nocookie.net/godzilla/images/9/91/MokeleMbembe75.jpeg/revision/latest/top-crop/width/360/height/450?cb=20200501224422');
+                box-shadow: 7px 7px rgba(236, 216, 254, 0.76);
+            }
+
+            .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 100px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 2px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 50%;
+            left: 180%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            }
+
+            .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+            }
+
+            .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+            }
+
+            .material-icons {
+                color: rgb(255, 255, 255);
+            }
+
+        </style>
+
+        <link rel="stylesheet" href="https://unpkg.com/fixedsys-css/css/fixedsys.css" id="fixedsys">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+
+    <body>
+
+        <button id="gite" onclick="location.href='site.html'"><div class="tooltip"><span class="tooltiptext"><i>Go back home</i><br> F1</span> <a href="#format_size"><i class="material-icons">gite</i></a></button>
+
+        <h1> <center>WELCOME BACK TO THE MOKELE MBEMBE BLOG  </center></h1>
+        <h3> <center> [ Stop procrastinating and ... ] </center></h3>
+        <br>
+
+        <div id="myDIV" class="header"> 
+            <h2 style="margin:5px"> Do these: </h2>
+            <input type="text" id="myInput" placeholder="[?]" onkeypress="func(event)">
+            <span onclick="newElement()" class="addBtn">Add</span>
+          </div>
+        
+          <ul id="myUL"> 
+            <li> 1</li>
+            <li class="checked">2</li>
+            <li>3</li>
+            <li> 4</li>
+            <li>5</li>
+            <li>6</li>
+          </ul>
+
+          <textarea> </textarea>
+
+        <script> 
+        // Create a "close" button and append it to each list item
+        var myNodelist = document.getElementsByTagName("LI");
+        var i;
+        for (i = 0; i < myNodelist.length; i++) {
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        myNodelist[i].appendChild(span);
+        }
+
+        // Click on a close button to hide the current list item
+        var close = document.getElementsByClassName("close");
+        var i;
+        for (i = 0; i < close.length; i++) {
+        close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+        }
+        }
+
+        // Add a "checked" symbol when clicking on a list item
+        var list = document.querySelector('ul');
+        list.addEventListener('click', function(ev) {
+        if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');
+        }
+        }, false);
+
+        // Create a new list item when clicking on the "Add" button
+        function newElement() {
+        var li = document.createElement("li");
+        var inputValue = document.getElementById("myInput").value;
+        var t = document.createTextNode(inputValue);
+        li.appendChild(t);
+        if (inputValue === '') {
+            console.log("nothing written");
+        } else {
+            document.getElementById("myUL").appendChild(li);
+        }
+        document.getElementById("myInput").value = "";
+
+        var span = document.createElement("SPAN");
+        var txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        li.appendChild(span);
+
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = function() {
+            var div = this.parentElement;
+            div.style.display = "none";
+             }
+            }
+        }
+        
+        function func(event) {
+            if(event.keycode == 13) {
+                newElement();
+                console.log("test");
+            }
+        }
+
+        
+        </script>
+        
+    </body>
+</html>

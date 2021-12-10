@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> WELCOME BACK TO THE MOKELE MBEMBE BLOG </title>
+        <a href="C:\Users\MJ\Documents\code\mokele\todo.html" id="todo"></a>
+        <style>
+
+            ::selection {
+            background-color: rgba(0, 247, 255, 0.336);
+            color: rgb(219, 255, 57); 
+            }
+            .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+            }
+
+            .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 100px;
+            background-color: #555;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 2px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 50%;
+            left: 180%;
+            margin-left: -60px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            }
+
+            .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+            }
+
+            .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+            }
+
+            input {
+                color: #0e46fd;
+                font-family: 'fixedsys';
+                font-size: 15px;
+                background-color: transparent;
+            }
+
+            button {
+                background-color: transparent;
+                border: 2px solid #ccc;
+                border-radius: 5px;
+                padding: 0.1%;
+                height: min-content;
+                width: min-content;
+            
+            }
+
+            body {
+                background-image: url('http://images5.fanpop.com/image/photos/31700000/Mokele-Mbembe-cryptozoology-31776274-350-242.jpg');
+                font-family: 'fixedsys';
+                padding: 10%;
+                margin-top: 100px;
+                margin-bottom: 100px;
+                margin-right: 150px;
+                margin-left: 80px;
+            }
+
+            #textarea1 {
+                font-family: 'fixedsys';
+                font-size: 18px;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: center;
+                color: #3060fc;
+                display:block;
+                background-color: #27232bab;
+                resize: both;
+                overflow: auto;
+                height: 1000px;
+                width: 750px;
+                padding: 12px 20px;
+                border: 8px solid rgb(0, 0, 0);
+                border-radius: 7px;
+
+            }
+
+            #input {
+                width: 200px;
+                height: 200px;
+                color: #0e46fd;
+                font-family: 'fixedsys';
+                font-size: 15px;
+                background-color: #121216;
+                border: 3px solid rgba(172, 255, 230, 0.534);
+                border-radius: 4px;
+            }
+
+            h1 {
+                font-family: 'fixedsys';
+                text-shadow: 4px 4px rgb(116, 84, 122);
+            }
+
+            h3 {
+                background-image: url('https://static.wikia.nocookie.net/godzilla/images/9/91/MokeleMbembe75.jpeg/revision/latest/top-crop/width/360/height/450?cb=20200501224422');
+                color: rgba(131, 196, 221, 0.877);
+                opacity: 0.8;
+            }
+
+            ul {
+                list-style-type: none;
+                margin: 2px;
+                padding: 2px;
+                width: 60px;
+                background-color: #b4b4b4ce;
+                border: 1px solid #555;
+                float: left;
+                position:relative;
+                left: 20px;
+                top: 150px;
+                opacity: 0.85;
+                border: 2px solid rgb(0, 0, 0);
+                border-radius: 7.5px;
+                }
+
+                li a {
+                display: block;
+                color: rgba(31, 31, 43, 0.911);
+                padding: 8px 16px;
+                text-decoration: none;
+                }
+
+                li {
+                text-align: center;
+                border-bottom: 1px solid #555;
+                }
+
+                li:last-child {
+                border-bottom: none;
+                }
+
+                li a.active {
+                background-color: #594d7a;
+                color: white;
+                }
+
+                li a:hover:not(.active) {
+                color: white;
+                background-image: url('https://static.wikia.nocookie.net/godzilla/images/9/91/MokeleMbembe75.jpeg/revision/latest/top-crop/width/360/height/450?cb=20200501224422');
+                }
+        </style>
+
+        <link rel="stylesheet" href="https://unpkg.com/fixedsys-css/css/fixedsys.css" id="fixedsys">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+
+    <body>
+        
+<ul id="options">
+    <button><li><a class="active" href="#options"><i class="material-icons"> tune </div></i></a></li></button>
+    <button id="addbox" onclick="addbox()"><div class="tooltip"><span class="tooltiptext"><i>Add box</i><br> F1</span> <li><a href="#format_size"><i class="material-icons">add_box</i></a></li></button>
+    <button id="taskalt" onclick="taskalt()"><div class="tooltip"><span class="tooltiptext"><i>Finish</i><br> F2</span> <li><a href="#task_alt"><i class="material-icons">task_alt</i></a></li></button>
+    <button id="transform" onclick="transform()"><div class="tooltip"><span class="tooltiptext"><i>Transform</i><br> F3 </span><li><a href="#task_alt"><i class="material-icons">transform</i></a></li> </button>  
+    <button id="today" onclick="today()"><div class="tooltip"><span class="tooltiptext"> <i>Date</i><br> F4</span> <li><a href="#today"><i class="material-icons">today</i></a></li></button>
+    <button id="highlight" onclick="highlight()"><div class="tooltip"><span class="tooltiptext"><i> Change color: </i> <br> <input type="color" id="colorpicker" value="#0000ff"></span> <li><a href="#highlight"><i class="material-icons">palette</i></a></li></button>
+    <button id="timeline" onclick = "location.href='todo.html'"><div class="tooltip"><span class="tooltiptext"><i>Things to do</i><br> F7</span> <li><a href="#format_size"><i class="material-icons">hourglass_empty</i></a></li> </button>
+    <button id="timeline" onclick = "location.href='timeline.html'"><div class="tooltip"><span class="tooltiptext"><i>Timeline</i><br> F8</span> <li><a href="#format_size"><i class="material-icons">archive</i></a></li> </button>
+    
+
+    
+  </ul>
+        <h1> <center>WELCOME BACK TO THE MOKELE MBEMBE BLOG  </center></h1>
+        <h3> <center> [ Type something... ] </center></h3>
+        <center> <textarea id="textarea1"> </textarea>  </center>
+
+        <script> 
+        var GLOBAL={};
+
+        var textarea = document.getElementById("textarea1");
+
+        document.getElementById("options").addEventListener("mouseover", mouseOver);
+        document.getElementById("options").addEventListener("mouseout", mouseOut);
+
+        function mouseOver() {
+        document.getElementById("options").style.backgroundColor = "";
+        console.log("MOUSE OVER");
+        document.getElementById("options").style.boxShadow = "7px 7px rgba(236, 216, 254, 0.76)";
+        }
+
+        function mouseOut() {
+        document.getElementById("options").style.color = "transparent";
+        console.log("MOUSE OUT");
+        document.getElementById("options").style.boxShadow = "none";
+        }
+
+        //date - simple embedded func
+
+        function today(){
+            const d = new Date();
+            document.getElementById("input").innerHTML = d;
+            console.log("TODAY");
+        }
+
+        
+        function addbox() {
+            document.getElementById("textarea1").addEventListener('click',func());
+        
+        }
+
+        var x,y;
+        var on;
+        function func() {
+            x=x+1;
+            if(x % 2 == 0) {
+                console.log("x EVEN, FUNC OFF");
+                on = false;
+            } else {
+                console.log("x ODD, FUNC ON");
+                on = true;
+            }
+
+            addBox();
+        }
+        function addBox() {
+            if (on) {
+            document.getElementById("textarea1").addEventListener("click",function (event) {
+            x=event.clientX;
+            y=event.clientY;
+            var inp = document.createElement("TEXTAREA");
+            var input = document.body.appendChild(inp);
+            input.id = "input";
+            input.style.position = "absolute";
+            input.style.left = Math.abs(x) + "px";
+            input.style.top = Math.abs(y) + "px";
+            })
+        } else {
+            console.log("FUNC OFF");
+            inp.readOnly = true;
+            inp.style.color = "turquoise";
+        }
+    }
+
+    function taskalt() {
+        document.getElementById("input").readOnly = true;
+        console.log("finish");
+    }
+
+    function transform() {
+        document.getElementById("textarea1").addEventListener("click", function(event) {
+            var xpos = event.clientX;
+            var ypos = event.clientY;
+            document.getElementById("input").style.left = xpos+"px";
+            document.getElementById("input").style.top = ypos+"px";
+        })
+    }
+
+    function highlight() {
+        var col = document.getElementById("colorpicker").value;
+        var x = document.getElementsByTagName("INPUT");
+        
+        if(x.length == 0) {
+            document.getElementById("textarea1").style.color = col;
+        } else {
+            document.getElementById("textarea1").style.color = col
+            document.getElementById("input").style.color = col
+        }
+    } 
+
+
+
+        
+        </script>
+        
+    </body>
+</html>
